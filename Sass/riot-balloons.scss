@@ -1,0 +1,129 @@
+// Riot Balloons
+// 2017 Dan Dineen
+
+// Variables
+$v-space: 1em;
+$h-space: 1em;
+
+// Colours
+$copy: #17232A;
+$paleblue: #DCE9EC;
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+//  Main stripes
+
+.hero {
+	background-color: red;
+	height: 300px; // Stand in size for now
+}
+
+header,
+footer {
+	background-color: white;
+	padding: $v-space $h-space;
+}
+
+footer {
+	background-color: pink;
+	position: relative;
+}
+
+.contact,
+.mailing-list {
+	height: 300px; // Comment
+}
+
+.contact {
+	background-color: $paleblue;
+	padding: $v-space $h-space;
+}
+
+// Grid
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+// TYPE
+
+p {
+	font-family: 'Bitter', serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: $copy;
+	font-weight: normal;
+}
+
+h1 {
+	// Set it up in Bitter font
+	font-family: 'Bitter', serif;
+	font-size: 44px;
+	line-height: 62px;
+	color: $copy;
+	font-weight: 300;
+}
+
+// Buttons
+
+a.button-lrg {
+	font-family: 'Bitter', serif;
+	font-size: 32px;
+	line-height: 32px;
+	border-radius: 40px;
+	padding: 16px 32px;
+	background-color: $copy;
+	color: white;
+	display: block;
+	max-width: 40%;
+	margin: 0 auto;
+
+	&:hover,
+	&:active {
+		background-color: red;
+	}
+}
+
+// Badges
+
+.announcement {
+	background-color: #D0006F;
+	color: white;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	padding: $v-space $h-space;
+	position: relative;
+	top: -(100px + 18);
+	left: calc(50% - 100px);
+	display: inline-block;
+}
+
+.social {
+	background-color: #D0006F;
+	color: white;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	padding: $v-space $h-space;
+	position: relative;
+	display: inline-block;
+
+	.facebook {
+		// Background image icon
+		top: -50px;
+		left: calc(50% - 200px);
+	}
+
+	.instagram {
+		// Background image icon
+		top: -50px;
+		left: calc(50% - 200px);
+	}
+}
