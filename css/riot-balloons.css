@@ -3,9 +3,9 @@ body {
   padding: 0;
   text-align: center; }
 
-.hero {
-  background-color: red;
-  height: 300px; }
+.hero img {
+  width: 100%;
+  height: auto; }
 
 header,
 footer {
@@ -14,11 +14,11 @@ footer {
 
 footer {
   background-color: pink;
-  position: relative; }
+  position: relative;
+  padding-bottom: 232px; }
 
-.contact,
 .mailing-list {
-  height: 300px; }
+  padding-bottom: calc(232px/2); }
 
 .contact {
   background-color: #DCE9EC;
@@ -30,28 +30,28 @@ footer {
 
 p {
   font-family: 'Bitter', serif;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 22px;
   color: #17232A;
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0 0 1em 0; }
 
 h1 {
   font-family: 'Bitter', serif;
-  font-size: 44px;
-  line-height: 62px;
+  font-size: 22px;
+  line-height: 28px;
   color: #17232A;
   font-weight: 300; }
 
 a.button-lrg {
   font-family: 'Bitter', serif;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 18;
+  line-height: 24px;
   border-radius: 40px;
   padding: 16px 32px;
+  display: inline-block;
   background-color: #17232A;
   color: white;
-  display: block;
-  max-width: 40%;
   margin: 0 auto; }
   a.button-lrg:hover, a.button-lrg:active {
     background-color: red; }
@@ -63,25 +63,36 @@ a.button-lrg {
   height: 200px;
   border-radius: 50%;
   padding: 1em 1em;
-  position: relative;
-  top: -118px;
-  left: calc(50% - 100px);
-  display: inline-block; }
+  position: absolute;
+  top: -116px;
+  left: calc(50% - 116px); }
+  .announcement p {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .social {
   background-color: #D0006F;
   color: white;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  padding: 1em 1em;
-  position: relative;
-  display: inline-block; }
-  .social .facebook {
-    top: -50px;
-    left: calc(50% - 200px); }
-  .social .instagram {
-    top: -50px;
-    left: calc(50% - 200px); }
+  padding: 1em 1em; }
+  .social.facebook {
+    position: absolute;
+    top: 116px;
+    left: 24px; }
+  .social.instagram {
+    position: absolute;
+    top: 116px;
+    right: 24px; }
+
+.logo {
+  width: 40%; }
+
+form {
+  padding: 1em 0; }
 
 /*# sourceMappingURL=riot-balloons.css.map */
