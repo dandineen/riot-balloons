@@ -18,33 +18,37 @@ body {
 	box-sizing: border-box;
 }
 
-//  Main stripes
+.hero {
+	background: url("../images/heroes/riot-balloons-hero.jpg") no-repeat center center transparent;
+	background-size: cover;
+	height: 240px;
 
-.hero img {
-	width: 100%;
-	height: auto;
+	// 568px and up
+	@media (min-width: 568px) {
+		height: 320px
+	}
+
+	// 800px and up
+	@media (min-width: 800px) {
+		height: 400px
+	}
 }
 
 header,
 footer {
 	background-color: white;
-	padding: $v-space $h-space;
+	padding: $v-space * 2 $h-space;
 }
 
 footer {
 	background: url("../images/backgrounds/balloon-outlines-pink.png") repeat-x center top $palepink;
-	height: 480px;
 	position: relative;
-}
-
-.contact,
-.mailing-list {
-	// height: 300px;
+	padding-bottom: 240px;
 }
 
 .mailing-list {
-	padding-top: calc(232px/2);
-	padding-bottom: 232px;
+	padding-top: 80px;
+	padding-bottom: calc(160px / 2 + 80px);
 }
 
 .contact {
@@ -55,11 +59,11 @@ footer {
 // Grid
 
 .container {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
-	padding: 0 24px;
+	padding: 0 32px;
+	position: relative;
 }
-
 
 // TYPE
 
@@ -78,6 +82,7 @@ h1 {
 	line-height: 28px;
 	color: $copy;
 	font-weight: 300;
+	margin: 0 0 $v-space;
 }
 
 // Buttons
@@ -104,13 +109,13 @@ a.button-lrg {
 .announcement {
 	background-color: #D0006F;
 	color: white;
-	width: 200px;
-	height: 200px;
+	width: 160px;
+	height: 160px;
 	border-radius: 50%;
 	padding: $v-space $h-space;
 	position: absolute;
-	top: -116px;
-	left: calc(50% - 116px);
+	top: -96px; // height + padding
+	left: calc(50% - 96px);
 
 	p {
 		color: white;
@@ -131,19 +136,49 @@ a.button-lrg {
 
 	&.facebook {
 		position: absolute;
-		top: 116px;
+		top: calc(96px/2);
 		left: 24px;
+
+		// 500px and up
+		@media (min-width: 568px) {
+			top: -48px;
+			left: calc(50% - (88px * 3));
+		}
 	}
 
 	&.instagram {
 		position: absolute;
-		top: 116px;
+		top: calc(96px/2);
 		right: 24px;
+
+		// 500px and up
+		@media (min-width: 568px) {
+			top: -48px;
+			right: calc(50% - (88px * 3));
+		}
 	}
 }
 
+// HEADER - Contains the logo and the main strapline
+
 .logo {
 	width: 50%;
+	margin: 0 0 32px 0;
+
+	// 480px and up
+	@media (min-width: 568px) {
+		height: 160px;
+	}
+}
+
+.page-header {
+	width: 100%;
+	margin: 0 auto;
+
+	// 480px and up
+	@media (min-width: 480px) {
+		width: 50%;
+	}
 }
 
 
@@ -165,6 +200,16 @@ input.email {
 	display: inline-block;
 	line-height: 32px;
 	font-family: 'Bitter', serif;
+	width: 100%;
+	margin-bottom: $v-space;
+	text-align: center;
+
+	// 480px and up
+	@media (min-width: 480px) {
+		text-align: left;
+		width: auto;
+		margin-right: 16px;
+	}
 }
 
 // Form button
