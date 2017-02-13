@@ -11,6 +11,26 @@ $paleblue: #DCE9EC;
 $pink: #D0006F;
 $palepink: #FFE1F1;
 
+// BREAKPOINTS
+
+// Mobile
+$mobile-upper: 480px;
+// Small - Phablets & small tablets
+$small-lower: $mobile-upper + 1;
+$small-upper: 640px;
+// Standard tablets & small laptops
+$medium-lower: $small-upper + 1;
+$medium-upper: 1000px;
+// Laptop and desktop
+$large-lower: $medium-upper + 1;
+
+// MEDIA QUERIES
+
+$mobile-only: "(min-width: 0) and (max-width: #{$mobile-upper})";
+$small-only: "(min-width: #{$small-lower}) and (max-width: #{$small-upper})";
+$medium-only: "(min-width: #{$medium-lower}) and (max-width: #{$medium-upper})";
+$medium-up: "(min-width: #{$medium-lower})";
+
 body {
 	margin: 0;
 	padding: 0;
@@ -24,12 +44,12 @@ body {
 	height: 240px;
 
 	// 568px and up
-	@media (min-width: 568px) {
+	@media #{$small-only} {
 		height: 320px
 	}
 
 	// 800px and up
-	@media (min-width: 800px) {
+	@media #{$medium-up} {
 		height: 400px
 	}
 }

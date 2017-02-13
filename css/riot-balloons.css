@@ -8,10 +8,10 @@ body {
   background: url("../images/heroes/riot-balloons-hero.jpg") no-repeat center center transparent;
   background-size: cover;
   height: 240px; }
-  @media (min-width: 568px) {
+  @media (min-width: 481px) and (max-width: 640px) {
     .hero {
       height: 320px; } }
-  @media (min-width: 800px) {
+  @media (min-width: 641px) {
     .hero {
       height: 400px; } }
 
