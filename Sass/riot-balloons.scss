@@ -12,7 +12,6 @@ $pink: #D0006F;
 $palepink: #FFE1F1;
 
 // BREAKPOINTS
-
 // Mobile
 $mobile-upper: 480px;
 // Small - Phablets & small tablets
@@ -25,11 +24,16 @@ $medium-upper: 1000px;
 $large-lower: $medium-upper + 1;
 
 // MEDIA QUERIES
-
+// Target screens less than 480px
 $mobile-only: "(min-width: 0) and (max-width: #{$mobile-upper})";
+// Target screens between 481px and 640px
 $small-only: "(min-width: #{$small-lower}) and (max-width: #{$small-upper})";
+$small-up: "(min-width: #{$small-lower})";
+// Target screens between 641px and 1000px
 $medium-only: "(min-width: #{$medium-lower}) and (max-width: #{$medium-upper})";
 $medium-up: "(min-width: #{$medium-lower})";
+// Target screens 1000px +
+$large-up: "(min-width: #{$large-lower})";
 
 body {
 	margin: 0;
@@ -43,12 +47,10 @@ body {
 	background-size: cover;
 	height: 240px;
 
-	// 568px and up
 	@media #{$small-only} {
 		height: 320px
 	}
 
-	// 800px and up
 	@media #{$medium-up} {
 		height: 400px
 	}
@@ -159,8 +161,7 @@ a.button-lrg {
 		top: calc(96px/2);
 		left: 24px;
 
-		// 500px and up
-		@media (min-width: 568px) {
+		@media #{$medium-up} {
 			top: -48px;
 			left: calc(50% - (88px * 3));
 		}
@@ -171,8 +172,7 @@ a.button-lrg {
 		top: calc(96px/2);
 		right: 24px;
 
-		// 500px and up
-		@media (min-width: 568px) {
+		@media #{$medium-up} {
 			top: -48px;
 			right: calc(50% - (88px * 3));
 		}
@@ -185,8 +185,7 @@ a.button-lrg {
 	width: 50%;
 	margin: 0 0 32px 0;
 
-	// 480px and up
-	@media (min-width: 568px) {
+	@media #{$medium-up} {
 		height: 160px;
 	}
 }
@@ -195,8 +194,7 @@ a.button-lrg {
 	width: 100%;
 	margin: 0 auto;
 
-	// 480px and up
-	@media (min-width: 480px) {
+	@media #{$medium-up} {
 		width: 50%;
 	}
 }
@@ -224,8 +222,7 @@ input.email {
 	margin-bottom: $v-space;
 	text-align: center;
 
-	// 480px and up
-	@media (min-width: 480px) {
+	@media #{$medium-up} {
 		text-align: left;
 		width: auto;
 		margin-right: 16px;

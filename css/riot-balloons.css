@@ -96,7 +96,7 @@ a.button-lrg {
     position: absolute;
     top: calc(96px/2);
     left: 24px; }
-    @media (min-width: 568px) {
+    @media (min-width: 641px) {
       .social.facebook {
         top: -48px;
         left: calc(50% - (88px * 3)); } }
@@ -104,7 +104,7 @@ a.button-lrg {
     position: absolute;
     top: calc(96px/2);
     right: 24px; }
-    @media (min-width: 568px) {
+    @media (min-width: 641px) {
       .social.instagram {
         top: -48px;
         right: calc(50% - (88px * 3)); } }
@@ -112,14 +112,14 @@ a.button-lrg {
 .logo {
   width: 50%;
   margin: 0 0 32px 0; }
-  @media (min-width: 568px) {
+  @media (min-width: 641px) {
     .logo {
       height: 160px; } }
 
 .page-header {
   width: 100%;
   margin: 0 auto; }
-  @media (min-width: 480px) {
+  @media (min-width: 641px) {
     .page-header {
       width: 50%; } }
 
@@ -140,7 +140,7 @@ input.email {
   width: 100%;
   margin-bottom: 1em;
   text-align: center; }
-  @media (min-width: 480px) {
+  @media (min-width: 641px) {
     input.email {
       text-align: left;
       width: auto;
