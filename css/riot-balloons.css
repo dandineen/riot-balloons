@@ -4,6 +4,17 @@ body {
   text-align: center;
   box-sizing: border-box; }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative; }
+
+header,
+footer {
+  background-color: white;
+  padding: 2em 1em; }
+
 .hero {
   background: url("../images/heroes/riot-balloons-hero.jpg") no-repeat center center transparent;
   background-size: cover;
@@ -15,19 +26,38 @@ body {
     .hero {
       height: 400px; } }
 
-header,
-footer {
-  background-color: white;
-  padding: 2em 1em; }
-
-.flexer {
+header > .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 0; }
   @media (min-width: 641px) {
-    .flexer {
-      flex-direction: row; } }
+    header > .container {
+      flex-direction: row;
+      padding: 0 88px; } }
+  @media (min-width: 1001px) {
+    header > .container {
+      padding: 0 240px; } }
+
+.logo {
+  width: 50%;
+  margin: 0 0 32px 0; }
+  @media (min-width: 641px) {
+    .logo {
+      height: 160px;
+      margin: 0 32px 0 0;
+      width: auto; } }
+  @media (min-width: 1001px) {
+    .logo {
+      height: 200px; } }
+
+.strapline {
+  width: 100%;
+  margin: 0 auto; }
+  @media (min-width: 641px) {
+    .strapline {
+      text-align: left; } }
 
 footer {
   background: url("../images/backgrounds/balloon-outlines-pink.png") repeat-x center top #FFE1F1;
@@ -41,12 +71,6 @@ footer {
 .contact {
   background: url("../images/backgrounds/balloon-outlines-blue.png") repeat-x center center #DCE9EC;
   padding: 80px 0; }
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 32px;
-  position: relative; }
 
 p {
   font-family: 'Bitter', serif;
@@ -63,6 +87,14 @@ h1 {
   color: #17232A;
   font-weight: 300;
   margin: 0 0 1em; }
+  @media (min-width: 641px) and (max-width: 1000px) {
+    h1 {
+      font-size: 24px;
+      line-height: 32px; } }
+  @media (min-width: 1001px) {
+    h1 {
+      font-size: 26px;
+      line-height: 34px; } }
 
 a.button-lrg {
   font-family: 'Bitter', serif;
@@ -101,6 +133,8 @@ a.button-lrg {
   height: 88px;
   border-radius: 50%;
   padding: 0.5em 0.5em; }
+  .social:hover {
+    background-color: #17232A; }
   .social.facebook {
     position: absolute;
     top: calc(96px/2);
@@ -117,21 +151,6 @@ a.button-lrg {
       .social.instagram {
         top: -48px;
         right: calc(50% - (88px * 3)); } }
-
-.logo {
-  width: 50%;
-  margin: 0 0 32px 0; }
-  @media (min-width: 641px) {
-    .logo {
-      height: 160px;
-      width: 40%; } }
-
-.page-header {
-  width: 100%;
-  margin: 0 auto; }
-  @media (min-width: 641px) {
-    .page-header {
-      width: 50%; } }
 
 form {
   padding: 2em 0; }
