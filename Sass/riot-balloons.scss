@@ -62,6 +62,19 @@ footer {
 	padding: $v-space * 2 $h-space;
 }
 
+// Flex box stuff
+.flexer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@media #{$medium-up} {
+		// Flip from stacking vertically to horizontal alignment
+		flex-direction: row;
+	}
+}
+
 footer {
 	background: url("../images/backgrounds/balloon-outlines-pink.png") repeat-x center top $palepink;
 	position: relative;
@@ -187,6 +200,7 @@ a.button-lrg {
 
 	@media #{$medium-up} {
 		height: 160px;
+		width: 40%;
 	}
 }
 

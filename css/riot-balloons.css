@@ -20,6 +20,15 @@ footer {
   background-color: white;
   padding: 2em 1em; }
 
+.flexer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 641px) {
+    .flexer {
+      flex-direction: row; } }
+
 footer {
   background: url("../images/backgrounds/balloon-outlines-pink.png") repeat-x center top #FFE1F1;
   position: relative;
@@ -114,7 +123,8 @@ a.button-lrg {
   margin: 0 0 32px 0; }
   @media (min-width: 641px) {
     .logo {
-      height: 160px; } }
+      height: 160px;
+      width: 40%; } }
 
 .page-header {
   width: 100%;
